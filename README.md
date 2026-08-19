@@ -1,152 +1,234 @@
-#  AI Project Intelligence & Risk Advisor
+# AI-Driven Enterprise Project Intelligence & Risk Management Platform
 
-![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-green.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.36-red.svg)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-XGBoost%20%7C%20CatBoost-orange.svg)
-![Generative AI](https://img.shields.io/badge/Generative%20AI-Google%20GenAI-purple.svg)
+An end-to-end AI-powered platform for **project risk prediction, project intelligence, schedule forecasting, dependency analysis, what-if simulation, document intelligence, and RAG-based assistance**.
 
-An integrated, end-to-end platform for predicting, analyzing, and mitigating project risks using Machine Learning and Generative AI. This platform empowers both IT and Non-IT stakeholders with advanced schedule forecasting, what-if simulations, dependency analysis, and an intelligent RAG-powered chatbot.
+The platform combines Machine Learning, Generative AI, Retrieval-Augmented Generation (RAG), and project analytics to help project managers and stakeholders identify risks early and make data-driven decisions.
 
 ---
 
-##  Key Features
+## Overview
 
-- **🛡️ Role-Based Access**: Dedicated workflows and dashboards for IT and Non-IT users.
-- ** AI Risk Prediction**: Leverages XGBoost and CatBoost to forecast project risks and project health.
-- ** Schedule Intelligence**: Deadline forecasting, milestone tracking, and delay impact analysis.
-- ** Dependency Tracking**: Critical path analysis using NetworkX to visualize bottlenecks.
-- ** What-If Simulation**: Safely test different scenarios (e.g., budget cuts, resource constraints) without affecting production data.
-- ** RAG Assistant**: A GenAI-powered chatbot (Google GenAI + Qdrant) that acts as an intelligence advisor over uploaded project documents (PDF, DOCX).
-- ** Interactive Dashboard**: Built with Streamlit for a rich, dynamic user experience.
+Enterprise projects can face risks due to changing requirements, budget overruns, schedule delays, resource constraints, dependencies, technical complexity, and other operational factors.
 
----
+This platform provides a centralized intelligence layer that can:
 
-##  System Architecture
+- Predict project risk levels
+- Analyze project health
+- Forecast schedule and deadlines
+- Identify critical dependencies
+- Perform what-if simulations
+- Analyze uploaded project documents
+- Generate AI-powered recommendations
+- Explain individual risk predictions
+- Provide a RAG-powered project intelligence assistant
 
-The architecture is decoupled into a reactive frontend, a robust API backend, machine learning predictive models, and a Generative AI intelligence layer.
-
-```mermaid
-graph TD
-    %% Frontend Layer
-    subgraph Frontend [UI Layer - Streamlit]
-        A1[Role-Based Dashboards]
-        A2[Risk & Schedule Intelligence]
-        A3[What-If Simulation]
-        A4[Document Processing]
-        A5[RAGBot Assistant]
-    end
-
-    %% API Layer
-    subgraph Backend [API Layer - FastAPI]
-        B1[Project API]
-        B2[Tasks & Dependencies API]
-        B3[ML Inference Service]
-        B4[Simulation Engine]
-        B5[Document Parser]
-    end
-
-    %% Data & AI Layer
-    subgraph Data_AI [Data & AI Layer]
-        C1[(Relational DB <br/> SQLite / PostgreSQL)]
-        C2[ML Models <br/> XGBoost, CatBoost]
-        C3[(Vector DB <br/> Qdrant)]
-        C4[Generative AI <br/> Google GenAI]
-    end
-
-    %% Connections
-    Frontend <--> |REST HTTP| Backend
-    Frontend <--> |GenAI Prompts| C4
-    B1 <--> C1
-    B2 <--> C1
-    B3 <--> C2
-    B5 --> C3
-    B5 --> C1
-    A5 <--> C4
-    A5 <--> C3
-```
+The application supports separate workflows for **IT and Non-IT projects**.
 
 ---
 
-##  Technology Stack
+## Key Features
 
-- **Frontend**: Streamlit, Requests
-- **Backend**: FastAPI, Pydantic, SQLAlchemy, Alembic, Uvicorn
-- **Database**: SQLite (default for local execution), PostgreSQL supported
-- **Machine Learning**: Scikit-Learn, XGBoost, CatBoost, NetworkX, Pandas, NumPy
-- **Generative AI / NLP**: Google GenAI, Qdrant (Vector Database), PyPDF, docx2txt
+### 1. Role-Based Project Intelligence
 
----
+Provides dedicated workflows for:
 
-##  Getting Started (Windows + Anaconda)
+- IT users
+- Non-IT users
 
-Follow these steps to run the application locally on your Windows machine.
-
-### 1. Create Environment
-First, create and activate a new Conda environment.
-```bat
-conda create -n project_ai python=3.11 -y
-conda activate project_ai
-```
-
-### 2. Install Dependencies
-Install all required packages from `requirements.txt`.
-```bat
-pip install -r requirements.txt
-```
-
-### 3. Quick Start (All-in-One)
-You can use the provided batch script to start both the backend and frontend seamlessly. The script activates the `.venv` or conda environment automatically and spawns two processes.
-```bat
-start_all.bat
-```
-*Alternatively, you can run them in separate terminals as shown below.*
-
-### 4. Start Backend (Manual)
-Open **Anaconda Prompt 1**:
-```bat
-cd backend
-set PYTHONPATH=.
-python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
-```
-- API Base URL: `http://127.0.0.1:8000`
-- API Documentation (Swagger): `http://127.0.0.1:8000/docs`
-
-### 5. Start Frontend (Manual)
-Open **Anaconda Prompt 2**:
-```bat
-conda activate project_ai
-python -m streamlit run app.py
-```
-- Streamlit UI: `http://localhost:8501`
+Users can access project analysis and risk intelligence according to their role.
 
 ---
 
-##  Recreate Demo Data & ML Models
+### 2. Machine Learning Risk Prediction
 
-If you want to clear the database, regenerate synthetic training data, and retrain the ML models, run the following commands from the `backend` directory:
+The platform uses machine learning models to predict project risk.
 
-```bat
-cd backend
-set PYTHONPATH=.
+Implemented models include:
 
-# 1. Generate training data
-python scripts/generate_training_data.py
+- XGBoost
+- CatBoost
 
-# 2. Train ML models (XGBoost/CatBoost)
-python -m app.ml.train
+The system evaluates project-related features such as:
 
-# 3. Seed demo project in the database
-python scripts/seed.py
-```
-*Note: `seed.py` will clear the existing demo project and recreate it.*
+- Budget
+- Project duration
+- Team size
+- Team experience
+- Requirement changes
+- Stakeholder count
+- Resource availability
+- Vendor dependencies
+- Communication
+- Sponsor engagement
+- Technical complexity
+- Scope clarity
+- External dependencies
+- Defects
+- Milestones missed
+- Cost overrun
+- Schedule overrun
+
+The prediction pipeline produces a project risk assessment that can be used for further project intelligence and recommendations.
 
 ---
 
-##  Environment Variables
+### 3. Risk Intelligence
 
-For the Generative AI and RAG features to work, you may need to configure a `.env` file in the root directory.
+The platform provides risk-focused project analytics including:
 
-```ini
-GOOGLE_API_KEY=your_google_api_key_here
-```
+- Risk score
+- Risk category
+- Project health indicators
+- Risk factor analysis
+- Project progress
+- Pending tasks
+- Client satisfaction indicators
+- Risk-based insights
+
+---
+
+### 4. Individual Prediction Explainability
+
+The system can explain individual project predictions using feature-level contribution analysis.
+
+This helps answer:
+
+> "Why was this project classified as high risk?"
+
+Instead of only providing a prediction, the platform identifies important factors contributing to the prediction.
+
+---
+
+### 5. AI-Powered Recommendations
+
+Based on the identified project risks, the platform generates actionable recommendations.
+
+Examples include recommendations related to:
+
+- Resource allocation
+- Schedule management
+- Requirement changes
+- Budget control
+- Dependency management
+- Risk mitigation
+- Stakeholder communication
+
+---
+
+### 6. Schedule Intelligence
+
+The platform provides schedule-related project intelligence including:
+
+- Deadline forecasting
+- Milestone tracking
+- Schedule-overrun analysis
+- Delay impact analysis
+- Project progress monitoring
+
+---
+
+### 7. Dependency Analysis
+
+Project dependencies can create bottlenecks and delays.
+
+The platform uses graph-based analysis with NetworkX to identify and visualize project dependencies and potential bottlenecks.
+
+---
+
+### 8. What-If Simulation
+
+Project managers can test hypothetical scenarios without modifying the original project data.
+
+Examples:
+
+- What if the budget is reduced?
+- What if resources become unavailable?
+- What if requirements increase?
+- What if the project duration changes?
+- What if additional dependencies are introduced?
+
+The system evaluates how these changes may affect project risk and health.
+
+---
+
+### 9. Document Intelligence
+
+Project documents can be uploaded for automated analysis.
+
+Supported document types include:
+
+- PDF
+- DOCX
+
+The document processing pipeline extracts useful project information such as:
+
+- Risks
+- Milestones
+- Dependencies
+- Project information
+- Relevant textual context
+
+---
+
+### 10. RAG-Powered AI Assistant
+
+The platform includes a Retrieval-Augmented Generation (RAG) chatbot for project-specific question answering.
+
+The RAG pipeline uses:
+
+- Google Generative AI
+- Vector embeddings
+- Qdrant
+- Document chunking
+- Retrieval
+- Context-aware response generation
+
+Users can ask questions about uploaded project documents and receive answers based on the retrieved project context.
+
+---
+
+### 11. Interactive Streamlit Dashboard
+
+The frontend is implemented using Streamlit.
+
+The application contains dedicated pages for:
+
+- Dashboard
+- Document Upload
+- Project Analysis
+- Risk Intelligence
+- Schedule Intelligence
+- Dependencies
+- What-If Simulation
+- Recommendations
+- Documentation
+- AI Assistant
+
+---
+
+# System Architecture
+
+The platform follows a modular architecture consisting of:
+
+```text
+                         ┌──────────────────────┐
+                         │      Streamlit UI     │
+                         │   Interactive Pages   │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────┐
+                         │      API Backend      │
+                         │       FastAPI         │
+                         └──────────┬───────────┘
+                                    │
+             ┌──────────────────────┼──────────────────────┐
+             │                      │                      │
+             ▼                      ▼                      ▼
+      ┌─────────────┐       ┌─────────────┐       ┌─────────────┐
+      │ ML Models   │       │  Project DB  │       │ RAG System  │
+      │ XGBoost     │       │ SQLite /     │       │ Documents   │
+      │ CatBoost    │       │ PostgreSQL   │       │ Embeddings  │
+      └─────────────┘       └─────────────┘       │ Qdrant      │
+                                                   │ Google GenAI│
+                                                   └─────────────┘
