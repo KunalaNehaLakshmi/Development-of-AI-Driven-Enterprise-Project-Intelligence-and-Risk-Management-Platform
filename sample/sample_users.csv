@@ -1,0 +1,7 @@
+username,password,role,email
+admin1,Admin@123,admin,admin1@example.com
+admin2,Admin@123,admin,admin2@example.com
+user1,User@123,user,priya.nair@example.com
+user2,User@123,user,arjun.mehta@example.com
+user3,User@123,user,fatima.sheikh@example.com
+user4,User@123,user,karan.shah@example.com
