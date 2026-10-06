@@ -1,0 +1,65 @@
+Project_ID,Project_Name,Progress,Client_Satisfaction,Bugs_Reported,Pending_Tasks,Team_Size,Priority,Status
+P1000,Project_A0,56.0,,12.0,1,5,Medium,Pending
+P1001,Project_B1,97.0,,31.0,1,9,Medium,Completed
+P1002,Project_C2,19.0,6.0,38.0,27,7,High,Pending
+P1003,Project_D3,76.0,2.3,31.0,22,9,Low,In Progress
+P1004,Project_E4,65.0,9.3,3.0,31,2,High,Pending
+P1005,Project_F5,,,29.0,32,9,Medium,Completed
+P1006,Project_G6,87.0,7.3,36.0,0,5,Low,In Progress
+P1007,Project_H7,91.0,,22.0,18,12,High,In Progress
+P1008,Project_I8,79.0,6.2,38.0,1,2,Medium,Completed
+P1009,Project_J9,79.0,6.4,44.0,25,9,High,Completed
+P1010,Project_K10,92.0,3.5,14.0,31,5,Low,Pending
+P1011,Project_L11,28.0,9.8,42.0,5,7,Medium,In Progress
+P1012,Project_M12,7.0,8.2,28.0,31,9,Medium,Completed
+P1013,Project_N13,26.0,9.5,35.0,3,5,High,In Progress
+P1014,Project_O14,57.0,9.2,,10,4,Low,In Progress
+P1015,Project_P15,6.0,6.8,31.0,16,10,Low,In Progress
+P1016,Project_Q16,92.0,9.4,6.0,23,4,Low,Completed
+P1017,Project_R17,34.0,2.7,21.0,4,10,Low,Completed
+P1018,Project_S18,42.0,3.6,27.0,33,14,Medium,Completed
+P1019,Project_T19,6.0,2.4,1.0,5,3,Medium,In Progress
+P1020,Project_U20,68.0,4.6,41.0,21,3,Medium,In Progress
+P1021,Project_V21,64.0,5.1,44.0,10,3,High,Completed
+P1022,Project_W22,25.0,4.2,5.0,15,7,High,Pending
+P1023,Project_X23,37.0,8.6,27.0,32,4,Low,In Progress
+P1024,Project_Y24,80.0,4.9,27.0,8,14,Low,Completed
+P1025,Project_Z25,62.0,4.2,43.0,5,10,Medium,Completed
+P1026,Project_A26,26.0,6.3,43.0,15,5,Medium,Completed
+P1027,Project_B27,93.0,3.1,,28,2,Low,Pending
+P1028,Project_C28,53.0,8.4,29.0,2,5,Low,In Progress
+P1029,Project_D29,95.0,2.6,10.0,19,2,Low,In Progress
+P1030,Project_E30,63.0,9.9,27.0,18,6,High,In Progress
+P1031,Project_F31,46.0,8.2,24.0,25,5,Low,In Progress
+P1032,Project_G32,96.0,3.6,38.0,2,9,Medium,In Progress
+P1033,Project_H33,,2.0,32.0,18,9,Medium,Completed
+P1034,Project_I34,84.0,8.5,0.0,19,8,Low,In Progress
+P1035,Project_J35,19.0,7.7,26.0,31,4,Medium,Completed
+P1036,Project_K36,66.0,7.8,12.0,6,2,Low,Completed
+P1037,Project_L37,,8.2,40.0,32,2,Medium,In Progress
+P1038,Project_M38,51.0,2.6,,17,13,Low,Completed
+P1039,Project_N39,66.0,4.9,38.0,0,12,Low,Completed
+P1040,Project_O40,55.0,2.9,5.0,10,4,Medium,In Progress
+P1041,Project_P41,59.0,8.9,7.0,27,7,Low,Pending
+P1042,Project_Q42,68.0,,26.0,24,8,Low,Completed
+P1043,Project_R43,,4.6,8.0,22,7,Medium,Completed
+P1044,Project_S44,55.0,2.5,36.0,30,7,Low,Pending
+P1045,Project_T45,11.0,4.5,32.0,29,7,High,Pending
+P1046,Project_U46,25.0,4.6,41.0,34,14,Low,In Progress
+P1047,Project_V47,77.0,7.8,43.0,6,4,Medium,In Progress
+P1048,Project_W48,43.0,7.1,23.0,15,7,Medium,In Progress
+P1049,Project_X49,22.0,9.1,14.0,25,9,Medium,Completed
+P1050,Project_Y50,8.0,5.8,31.0,1,12,Low,Pending
+P1051,Project_Z51,93.0,3.0,31.0,0,12,Low,Pending
+P1052,Project_A52,64.0,7.7,23.0,11,3,High,Completed
+P1053,Project_B53,18.0,8.1,40.0,4,6,High,Completed
+P1054,Project_C54,,6.5,11.0,31,2,High,Pending
+P1055,Project_D55,,8.2,38.0,8,13,Low,In Progress
+P1056,Project_E56,57.0,6.0,1.0,34,2,Low,In Progress
+P1057,Project_F57,6.0,6.2,2.0,18,6,Low,In Progress
+P1058,Project_G58,88.0,5.4,36.0,15,13,Medium,In Progress
+P1059,Project_H59,96.0,2.2,16.0,2,14,Low,Pending
+P1039,Project_N39,66.0,4.9,38.0,0,12,Low,Completed
+P1041,Project_P41,59.0,8.9,7.0,27,7,Low,Pending
+P1002,Project_C2,19.0,6.0,38.0,27,7,High,Pending
+P1048,Project_W48,43.0,7.1,23.0,15,7,Medium,In Progress
